@@ -1,0 +1,340 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ETC</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="East Technical College" name="keywords">
+    <meta content="ETC" name="description">
+
+<!------------------------------------------------>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+    <!---------------------------adjusted--------------->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>justSoondar!</title>
+    
+    <!-- custom css -->
+
+    <!-- animate css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+    <!---------------------------end adjusted----------->
+    <link href="{% static 'Homepage/img/favicon.ico' %}" rel="icon">
+
+    <!-- Font Awesome -->
+    <script src="{% static 'https://use.fontawesome.com/9d03eba9c5.js' %}"></script>
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}" rel="stylesheet">
+    <!-- Flaticon Font  -->
+    <link href="{% static 'Homepage/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'Homepage/lib/owlcarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'Homepage/css/style.css' %}" rel="stylesheet">
+
+    <style>
+        .office-when{
+            height:15%;
+            text-align:right;
+        }
+    </style>
+    
+</head>
+
+<body class="bg-white">
+    <!-- Topbar Start -->
+    
+    <div class="container-fluid fixed-top">
+        <div class="container-fluid">
+            <div class="row bg-east py-2 px-lg-5">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="mr-2 mb-2 mb-lg-0 text-white">Opening Hours:</p>
+                        {% for upperHomePage in upperHomePage %}
+                        <span class="mb-2 mb-lg-0 text-white">{{upperHomePage.opening_time}} - {{upperHomePage.closing_time}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="m-0 mr-1 text-white">Follow Us:</p>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-3 px-lg-5 bg-tech office-when">            
+                <div class="col-lg-8 text-center text-lg-right  m-0">
+                    <div class="d-inline-flex align-items-end justify-content-end float-right">
+                        <div class="d-inline-flex flex-column pr-3 bg-tech border-right">
+                            <h6>Our Office</h6>
+                            <p class="m-1 text-east">{{upperHomePage.office_venue}}</p>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center bg-tech px-3 border-right">
+                            <h6>Email Us</h6>
+                            <p class="m-0 text-east">{{upperHomePage.ETC_mail}}</p>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center pl-3">
+                            <h6>Call Us</h6>
+                            <p class="m-0 text-east">{{upperHomePage.ETC_phone}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar Start -->
+    
+        <div class="row py-3 px-lg-5 nav-bar bg-east m-0 px">
+            <nav class="navbar navbar-expand-lg bg-none navbar-dark py-0">
+                <div class="col-lg-2 d-inline-flex align-items-right p-0">
+                    {% for upperHomePage in upperHomePage %}
+                    <a href="" class="navbar-brand d-none d-lg-block">
+                        <img src="{{upperHomePage.school_logo.url}}" class="img-logo navbar-brand m-0 p-0" alt="Logo" />
+                    </a>
+                    {% endfor %}
+                </div>
+                <div class="container-fluid align-item-center d-inline-flex">
+                    <div class="collapse navbar-collapse text-centerd-inline-flex" id="navbarCollapse">
+                        <div class="navbar-nav m-0 py-4 text-center">
+                            <a href="/" class="nav-item nav-link active">HOME</a>
+                            <div class="nav-item dropdown">
+                                <a href="/about" class="nav-link dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+                                <div class="dropdown-menu text-capitalize">
+                                <a href="/about" class="dropdown-item">About the College</a>
+                                <a href="/message_from_principal" class="dropdown-item">Message From the Principal</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="/programmes/programmes" class="nav-link dropdown-toggle" data-toggle="dropdown">PROGRAMMES</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="/programmes/programmes" class="dropdown-item">Programmes</a>
+                                <a href="/programmes/computing" class="dropdown-item">School of Computer Studies</a>
+                                <a href="/programmes/business_school" class="dropdown-item">School of Business Studies</a>
+                                <a href="single.html" class="dropdown-item">School of Project Management</a>
+                                <a href="single.html" class="dropdown-item">School of Computer Studies</a>
+                                <a href="single.html" class="dropdown-item">School of Computer Studies</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ADMISSIONS</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="blog.html" class="dropdown-item">Admissions</a>
+                                <a href="single.html" class="dropdown-item">Admission Requirements</a>
+                                <a href="blog.html" class="dropdown-item">Examination Fees</a>
+                                <a href="single.html" class="dropdown-item">Apply Online</a>
+                                <a href="blog.html" class="dropdown-item">Payment Details</a>
+                                <a href="single.html" class="dropdown-item">FAQs</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FACILITIES</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="blog.html" class="dropdown-item">Accommodation</a>
+                                <a href="single.html" class="dropdown-item">Library and Laboratories</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">MEDIA</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="blog.html" class="dropdown-item">Downloads</a>
+                                <a href="single.html" class="dropdown-item">Gallery</a>
+                                <a href="single.html" class="dropdown-item">News</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!--------simple gallery-->
+    <div class="card bg-dark text-white" style="position: relative;margin-top: 19%;">
+        {% for about in about %}
+        {% if forloop.first %}
+        <img src="{{ about.About_gallery_pic.url }}" class="card-img" alt="Stony Beach"/>
+        <div class="card-img-overlay">
+          <p class="card-text d-flex h-100 align-items-center justify-content-center">
+            Hello
+          </p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+        
+        {% endif %}        
+        {% endfor %}
+        
+      </div>
+      <!---------end simple gallery-->
+
+    <!-- about etc message Start -->
+    <div class="card mb-3 p-5" >
+        {% for about in about %}
+        {% if forloop.first  %}
+        <img src="{{ about.About_pic.url }}" class="card-img-top" alt="Wild Landscape"/>
+        <div class="card-body">
+          <h5 class="card-title">{{about.About_title}}</h5>
+          <p class="card-text">
+              {{about.About_message}}
+            
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated {{about.About_update}} ago</small>
+          </p>
+        </div>
+        
+        {% endif %}        
+        {% endfor %}
+        
+      </div>
+
+    <!-- about etc message end -->
+
+
+
+
+         
+    <!-- Footer Start -->
+    <div class="container-fluid bg-college text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize font-italic text-white"><span class="text-tech">About</span>Us</h1>
+                <p class="m-0">East Technical College is found at Ushirika Plaza in Chuka, Tharaka Nithi County.</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-east mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Programmes</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Management</a>
+                            <a class="text-white text-east" href="#"><i class="fa fa-angle-right mr-2"></i>Careers</a>
+                            <a class="text-white text-east" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-map-marker-alt mr-2"></i>East Technical College, Chuka</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>P.O. Box 52-6400</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-phone-alt mr-2"></i>0792094889 / 0732006172 / 0711125507</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-envelope mr-2"></i>easttechnicalcollege@gmail.com</a>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get Newsletter</h5>
+                        
+                        <div class="d-flex justify-content-center mt-1">
+                            <form action="#" method="post" class="p-0 ">
+                                
+                                    <input type="email" placeholder="example@email.com" />
+                               
+                                    <input type="text" placeholder="Subject" />
+                                
+                                    <textarea name="" id=""></textarea>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-6 text-center text-md-left align-content-center justify-content-center mb-3 mb-md-0">
+                <p class="m-0 text-white text-center">
+                    &copy; <a class="text-white font-weight-bold" href="#">East Technical College</a>. All Rights Reserved. Designed by
+                    <a class="text-white font-weight-bold" href="https://panatechke.tk" target="_blank">Panatech Solutions</a>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-east border back-to-top"><i class="fa fa-arrow-circle-up text-east"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'Homepage/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'Homepage/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'Homepage/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'Homepage/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'Homepage/js/main.js' %}"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+        <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+</body>
+
+</html>

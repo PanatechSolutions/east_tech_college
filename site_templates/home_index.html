@@ -1,0 +1,692 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ETC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="East Technical College" name="keywords">
+    <meta content="ETC" name="description">
+
+<!------------------------------------------------>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+    <!---------------------------adjusted--------------->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>justSoondar!</title>
+    
+    <!-- custom css -->
+
+    <!-- animate css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+    <!---------------------------end adjusted----------->
+    <link href="{% static 'Homepage/img/favicon.ico' %}" rel="icon">
+
+    <!-- Font Awesome -->
+    <script src="{% static 'https://use.fontawesome.com/9d03eba9c5.js' %}"></script>
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}" rel="stylesheet">
+    <!-- Flaticon Font  -->
+    <link href="{% static 'Homepage/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'Homepage/lib/owlcarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'Homepage/css/style.css' %}" rel="stylesheet">
+
+    <style>
+                 
+
+        .office-when{
+            height:15%;
+            text-align:right;
+        }
+        .nav-area{
+            position: relative;
+            top: 50%;
+            left: 30%;
+            transform: translate(-33.9%, 50%);
+            height: 60px;
+            display: block;
+            list-style: none;
+            background-color: #fffff;
+        }
+        .nav-area li{
+            position: relative;
+            float: left;
+            background: #0d98ba;
+            line-height: 60px;
+            padding: 10px 14px;
+            margin: 0px;
+            border-color: #0d98ba;
+        }
+        .nav-area li:hover{
+            background: #FFFFFF;
+            border-color: #0d98ba;
+        }
+        .nav-area li a{
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            text-transform: uppercase;
+            
+        }
+        .nav-area li a:hover{
+            color: #ff0000;
+            
+        }
+        .nav-area li:first-of-type{
+            margin-left: 20px;
+            background: #FFFFFF;
+            border-color: #0d98ba;
+        }
+        .nav-area li:first-of-type:hover{
+            background: #FFFFFF;
+            border-color: #0d98ba;
+        }
+        .nav-area li:last-of-type{
+            margin-right: 0px;
+            border-color: #0d98ba;
+        }
+        .nav-area li:before{
+            content:"";
+            position:absolute;
+            background: none;
+            border-left: 40px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 96px solid #0d98ba;
+            left: -38.0px;
+            top: 0;
+        }
+        .nav-area li:after{
+            content:"";
+            position:absolute;
+            border-left: 0px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 96px solid #0d98ba;
+            right: -38.9px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: #0d98ba;
+            
+        }
+        .nav-area li:first-of-type:before{
+            width: 10px;
+            height: 60px;
+            background: #FFFFFF;
+            left: 0px;
+            border: none;
+            border-color: #0d98ba;
+        }
+        .nav-area li:hover,{
+            cursor: pointer;
+            border-top: 40px solid #0d98ba;
+            background: #FFFFFF;
+            border-color: #0d98ba;
+        }
+        .nav-area li:hover:before{
+            border-top: 0px solid #FFFFFF;
+            border-bottom: 96px solid #FFFFFF;
+            
+        }
+        .nav-area li:hover:after{
+            border-top: 40px solid #FFFFFF;
+            border-top: 96px solid #FFFFFF;
+        }
+        .nav-area li:first-of-type:hover:before{
+            background: #FFFFFF;
+            width: 10px;
+            height: 0px;
+        }
+        .nav-area li:last-of-type:after{
+            border: none;
+            width: 10px;
+            height: 40px;
+            right: -10px;
+        }
+        .nav-area li:last-of-type:hover:after{
+            background: #FFFFFF;
+            width: 10px;
+            height: 0px;
+        } 
+    </style>
+    
+</head>
+
+<body class="bg-white">
+    <!-- Topbar Start -->
+    <div class="container-fluid fixed-top ">
+        <div class="container-fluid p-0 ">
+            <div class="row bg-east py-2 px-lg-0 navbar navbar-expand-lg">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="mr-2 mb-2 mb-lg-0 text-white">Opening Hours:</p>
+                        {% for upperHomePage in upperHomePage %}
+                        <span class="mb-2 mb-lg-0 text-white">{{upperHomePage.opening_time}} - {{upperHomePage.closing_time}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="m-0 mr-1 text-white">Follow Us:</p>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-3 px-lg-5 bg-tech office-when navbar navbar-expand-lg">            
+                <div class="col-lg-8 text-center text-lg-right ">
+                    <div class="d-inline-flex align-items-end justify-content-end float-right">
+                        <div class="d-inline-flex flex-column pr-3 bg-tech border-right">
+                            <h6>Our Office</h6>
+                            <p class="m-1 text-east">{{upperHomePage.office_venue}}</p>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center bg-tech px-3 border-right">
+                            <h6>Email Us</h6>
+                            <a class="m-0 text-east " href="">{{upperHomePage.ETC_mail}}</a>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center pl-3">
+                            <h6>Call Us</h6>
+                            <p class="m-0 text-east">{{upperHomePage.ETC_phone}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar Start -->
+    
+        <div class="row navbar navbar-expand  py-2 px-lg-0 m-5 container-fluid fixed-top p-3" style="width:100%;">
+            <nav class=" nav-area">
+                <li>
+                    {% for upperHomePage in upperHomePage %}
+                    <a href="#">
+                            <img src="{{upperHomePage.school_logo.url}}" style="width:47%; height:45%;" alt="Logo" />
+                    </a>
+                        
+                    {% endfor %}
+                </li>
+    
+                <li>
+                    <div class="text-centerd-inline-flex">
+                        <div class="text-center">
+                            <a href="/" class="active nav-link  ">HOME</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="/about" class="nav-link dropdown-toggle " style="border: none;" data-toggle="dropdown">ABOUT US</a>
+                        <div class="dropdown-menu text-capitalize">
+                        <a href="/about" class="dropdown-item ">About the College</a>
+                        <a href="/message_from_principal" class="dropdown-item ">Message From the Principal</a>
+                    </div>
+                
+                </li>
+    
+                <li>
+                    <div class="dropdown">
+                        <a href="/programmes/programmes" class="nav-link dropdown-toggle " data-toggle="dropdown">PROGRAMMES</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="/programmes/programmes" class="dropdown-item ">Programmes</a>
+                            <a href="/programmes/Application_Letter" class="dropdown-item ">Application_Letter</a>
+                            <a href="/programmes/computing" class="dropdown-item ">School of Computer Studies</a>
+                            <a href="/programmes/business_school" class="dropdown-item ">School of Business Studies</a>
+                            <a href="single.html" class="dropdown-item ">School of Project Management</a>
+                            <a href="single.html" class="dropdown-item ">School of Computer Studies</a>
+                            <a href="single.html" class="dropdown-item ">School of Computer Studies</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">ADMISSIONS</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Admissions</a>
+                            <a href="single.html" class="dropdown-item ">Admission Requirements</a>
+                            <a href="blog.html" class="dropdown-item ">Examination Fees</a>
+                            <a href="single.html" class="dropdown-item ">Apply Online</a>
+                            <a href="blog.html" class="dropdown-item ">Payment Details</a>
+                            <a href="single.html" class="dropdown-item ">FAQs</a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class=" dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">FACILITIES</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Accommodation</a>
+                            <a href="single.html" class="dropdown-item ">Library and Laboratories</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">MEDIA</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Downloads</a>
+                            <a href="single.html" class="dropdown-item ">Gallery</a>
+                            <a href="single.html" class="dropdown-item ">News</a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li>
+                    <a href="contact.html" class="nav-link">CONTACT US</a>
+                </li>
+            </nav>
+        </div>
+    
+
+    <!-- Navbar End -->
+
+    
+
+    <!-- slider section -->
+    <div class="container-fluid" style="position: relative;margin-top: 19%;" >
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                {% for carousel in carousel %}
+
+                <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                    <img src="{{ carousel.home_carousel_pics.url }}" style="height:650px;" class="testi-overly d-block w-100" alt="sliderImg">
+                    <div class="carousel-caption d-flex d-md-block  text-white">
+                        <h3 class="animate__animated  text-white d-flex  d-none d-md-block
+                        {% if forloop.counter0 == 0 %}
+                        animate__fadeInDown
+                        {% endif %}
+                        {% if forloop.revcounter == 1 %}
+                        animate__bounce
+                        {% endif %}
+                        {% if forloop.revcounter == 2 %}
+                        animate__fadeInRight
+                        {% endif %} " >{{ carousel.carousel_message }}</h3>
+                        <h4 class="animate__animated animate__zoomIn text-white  d-none d-md-block align-items-center justify-content-center">{{ carousel.carousel_second_message }}</h4>
+                        <a href="#" class="button animate__animated animate__zoomIn mt-3 py-3 px-5 btn font-weight-bold ">{{carousel.carousel_button}}</a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">  
+        <div class="d-flex flex-column text-center mb-5 py-3">
+            <h3 class="text-primary mb-3"><span class="text-tech">Quick </span><span class="text-east">Search</span></h3>
+        </div>      
+        <table class="table">
+            <form method="post" action="findCourse"  >
+                {% csrf_token %}
+                <tr>
+                    <td rowspan="3"> 
+                    <input type="text" name="course_name"  placeholder="Search Course" class="tableWidth"/></td>
+                    <td colspan="3">
+                        <select class="tableWidth2">
+                            <option value="" selected>Select Level i.e Certificate</option>
+                            <option value="Certificate">Certificate</option>
+                            <option value="Diploma">Diploma</option>
+                        </select> 
+                    </td>
+                    <td>
+                        <input type="submit" value="Search" name="btn_Search_Course" class="btn btn-primary">
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <div class="d-flex flex-column text-center mb-5 py-3" style="display:none;">
+            <h3 class="text-primary mb-3" style="display:none;"><span class="text-tech">Quick </span><span class="text-east">Result</span></h3>
+
+            <div class="container pt-5" style="display:none;">
+                
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card mb-2 p-3">
+                            <img class="card-img-top" src="" alt="">
+                            <div class="card-body bg-secondary p-0 bg-white">
+                                <h6 class="card-title text-east text-truncate m-0"><!--Program: --></h6>
+                                <p>School: </p>
+                                <p><!--Requirements: --></p>
+                                <p><!--Duration: --></p>
+                                <p><!--Level: --></p>
+                            </div>
+                            <div class="card-footer align-items-center justify-content-center">
+                                <button class="btn bg-east text-white"></button>
+                            </div>                    
+                        </div>                
+                    </div>            
+                              
+                </div>
+            </div>
+
+        </div>  
+    </div>     
+    <!-- Features End -->
+
+
+    
+
+    <!-- Services Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h3 class="text-primary mb-3"><span class="text-tech">Courses </span><span class="text-east">Gallery</span></h3>
+        </div>
+        <div class="row pb-3 owl-carousel h-100" style="height: 100%;">
+            {% for gallery in gallery %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card mb-2 p-3">
+                    <img class="card-img-top" src="{{ gallery.gallery_pics.url }}" alt="">
+                    <div class="card-body bg-secondary p-0 bg-white">
+                        <h6 class="card-title text-east text-truncate m-0">Program: {{gallery.course}}</h6>
+                        <p>School: {{gallery.edu_school}}</p>
+                        <p>Requirements: {{gallery.course_require}}</p>
+                        <p>Duration: {{gallery.course_duration}}</p>
+                        <p>Level: {{gallery.edu_level}}</p>
+                    </div>
+                    <div class="card-footer align-items-center justify-content-center">
+                        <button class="btn bg-east text-white">{{gallery.button_text}}</button>
+                    </div>                    
+                </div>                
+            </div>            
+            {% endfor %}           
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid bg-primary my-5 py-5 text-center bg-east">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-user-shield mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">250</h4>
+                <h6 class="text-white m-0">Our Staff</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-users mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">1500</h4>
+                <h6 class="text-white m-0">Happy Client</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-shield-alt mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">10000</h4>
+                <h6 class="text-white m-0">Project Complete</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-award mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">25</h4>
+                <h6 class="text-white m-0">Award Winning</h6>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Features Start -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-5 mb-5">
+                <h5 class="text-tech mb-3"><i class="fa fa-university" aria-hidden="true"></i> Why Study with Us?</h5>
+                <h1 class="mb-4">Purposed Education</h1>
+                {% for study in studyWithUs %}
+                {% if forloop.first %}
+                <img class="img-thumbnail mb-4 p-3" src="{{ study.reason_pics.url }}" alt="Image">
+                <p>
+                    {{study.picture_label}}
+                </p>
+                <a href="" class="btn btn-lg bg-east mt-2 text-white">Learn More</a>
+                {% endif %}
+                
+                {% endfor %}
+            </div>
+            <div class="col-lg-7">
+                
+                <div class="row">
+                    {% for study in studyWithUs %}
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h2><i class="fa fa-book d-flex flex-shrink-0 align-items-center justify-content-center  text-east m-0 mr-3" aria-hidden="true"></i></h2>
+                                
+                                <h6 class="text-truncate m-0">{{ study.major_reason }}</h6>
+                            </div>
+                            <p>{{ study.minor_details }}</p>
+                        </div>
+                       
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+
+    
+    <!-- Testimonial Start -->
+    <div class="container-fluid my-5 p-0 py-5" style="background: #f6f6f6;">
+        <div class="container p-0 py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h5 class="text-primary mb-3">Testimonial</h5>
+                <h1 class="m-0">Meet our Alumini</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                {% for Alumini in alumini%}
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        {{ Alumini.Alumni_message }}
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="img-thumbnail bg-light rounded-circle" src="{{Alumini.Alumni_pic.url}}" style="width: 80px; height: 80px; padding: 12px;" alt="Image">
+                        <div class="pl-4">
+                            <h6 class="text-primary">{{ Alumini.Alumni_name }}</h6>
+                            <p class="m-0">{{ Alumini.Alumni_designation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h5 class="text-primary mb-3">Latest News</h5>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-4 mb-4">
+                <div class="card mb-2 p-3">
+                    <img class="card-img-top" src="{% static 'Homepage/img/etc4.jpg' %}" alt="">
+                    <div class="card-body bg-secondary d-flex align-items-center p-0">
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">New Courses Introduced</h6>
+                        <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
+                    </div>
+                    <div class="card-footer py-3 px-4">
+                        <p class="m-0">Members of the public are to apply for this new courses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card mb-2 p-3">
+                    <img class="card-img-top" src="{% static 'Homepage/img/etc11.jpg' %}" alt="">
+                    <div class="card-body bg-secondary d-flex align-items-center p-0">
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">New Branch coming soon</h6>
+                        <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
+                    </div>
+                    <div class="card-footer py-3 px-4">
+                        <p class="m-0">You might consider relocating to this new branches</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card mb-2 p-3">
+                        <img class="card-img-top" src="{% static 'Homepage/img/etc9.jpg' %}" alt="">
+                    <div class="card-body bg-secondary d-flex align-items-center p-0">
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">Bursaries to be issued soon</h6>
+                        <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
+                    </div>
+                    <div class="card-footer py-3 px-4">
+                        <p class="m-0">Application are now welcomed for the issuance of Bursaries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-college text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize font-italic text-white"><span class="text-tech">About</span>Us</h1>
+                <p class="m-0">East Technical College is found at Ushirika Plaza in Chuka, Tharaka Nithi County.</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-east mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Programmes</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Management</a>
+                            <a class="text-white text-east" href="#"><i class="fa fa-angle-right mr-2"></i>Careers</a>
+                            <a class="text-white text-east" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-map-marker-alt mr-2"></i>East Technical College, Chuka</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>P.O. Box 52-6400</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-phone-alt mr-2"></i>0792094889 / 0732006172 / 0711125507</a>
+                            <a class="text-white text-east mb-2" href="#"><i class="fa fa-envelope mr-2"></i>easttechnicalcollege@gmail.com</a>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get Newsletter</h5>
+                        
+                        <div class="d-flex justify-content-center mt-1">
+                            <form action="#" method="post" class="p-0 ">
+                                
+                                    <input type="email" placeholder="example@email.com" />
+                               
+                                    <input type="text" placeholder="Subject" />
+                                
+                                    <textarea name="" id=""></textarea>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-6 text-center text-md-left align-content-center justify-content-center mb-3 mb-md-0">
+                <p class="m-0 text-white text-center">
+                    &copy; <a class="text-white font-weight-bold" href="#">East Technical College</a>. All Rights Reserved. Designed by
+                    <a class="text-white font-weight-bold" href="https://panatechke.tk" target="_blank">Panatech Solutions</a>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-east border back-to-top"><i class="fa fa-arrow-circle-up text-east"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'Homepage/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'Homepage/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'Homepage/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'Homepage/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'Homepage/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'Homepage/js/main.js' %}"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+        <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+</body>
+
+</html>
