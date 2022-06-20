@@ -5,8 +5,323 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!------------------------------------------------>
+<!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+rel="stylesheet"
+/>
+  <!---------------------------adjusted--------------->
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  
+  <!-- custom css -->
+
+  <!-- animate css link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+  <!---------------------------end adjusted----------->
+  <link href="{% static 'Homepage/img/favicon.ico' %}" rel="icon">
+
+  <!-- Font Awesome -->
+  <script src="{% static 'https://use.fontawesome.com/9d03eba9c5.js' %}"></script>
+  <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}" rel="stylesheet">
+  <!-- Flaticon Font  -->
+  <link href="{% static 'Homepage/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="{% static 'Homepage/lib/owlcarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="{% static 'Homepage/css/style.css' %}" rel="stylesheet">
+
+  <style>
+               
+
+      .office-when{
+          height:15%;
+          text-align:right;
+      }
+      .nav-area{
+          position: relative;
+          top: 50%;
+          left: 30%;
+          transform: translate(-33.9%, 50%);
+          height: 60px;
+          display: block;
+          list-style: none;
+          background-color: #fffff;
+      }
+      .nav-area li{
+          position: relative;
+          float: left;
+          background: #0d98ba;
+          line-height: 60px;
+          padding: 10px 14px;
+          margin: 0px;
+          border-color: #0d98ba;
+      }
+      .nav-area li:hover{
+          background: #FFFFFF;
+          border-color: #0d98ba;
+      }
+      .nav-area li a{
+          display: block;
+          text-decoration: none;
+          color: #ffffff;
+          text-transform: uppercase;
+          
+      }
+      .nav-area li a:hover{
+          color: #ff0000;
+          background: #FFFFFF;
+          
+      }
+      .nav-area li:first-of-type{
+          margin-left: 20px;
+          background: #FFFFFF;
+          border-color: #0d98ba;
+      }
+      .nav-area li:first-of-type:hover{
+          background: #FFFFFF;
+          border-color: #0d98ba;
+      }
+      .nav-area li:last-of-type{
+          margin-right: 0px;
+          border-color: #0d98ba;
+      }
+      .nav-area li:before{
+          content:"";
+          position:absolute;
+          background: none;
+          border-left: 40px solid transparent;
+          border-right: 0px solid transparent;
+          border-bottom: 96px solid #0d98ba;
+          left: -38.0px;
+          top: 0;
+      }
+      .nav-area li:after{
+          content:"";
+          position:absolute;
+          border-left: 0px solid transparent;
+          border-right: 40px solid transparent;
+          border-top: 96px solid #0d98ba;
+          right: -38.9px;
+          top: 0;
+          width: 0;
+          height: 0;
+          border-color: #0d98ba;
+          
+      }
+      .nav-area li:first-of-type:before{
+          width: 10px;
+          height: 60px;
+          background: #FFFFFF;
+          left: 0px;
+          border: none;
+          border-color: #0d98ba;
+      }
+      .nav-area li:hover,{
+          cursor: pointer;
+          border-top: 40px solid #0d98ba;
+          background: #FFFFFF;
+          border-color: #0d98ba;
+      }
+      .nav-area li:hover:before{
+          border-top: 0px solid #FFFFFF;
+          border-bottom: 96px solid #FFFFFF;
+          
+      }
+      .nav-area li:hover:after{
+          border-top: 40px solid #FFFFFF;
+          border-top: 96px solid #FFFFFF;
+      }
+      .nav-area li:first-of-type:hover:before{
+          background: #FFFFFF;
+          width: 10px;
+          height: 0px;
+      }
+      .nav-area li:last-of-type:after{
+          border: none;
+          width: 10px;
+          height: 40px;
+          right: -10px;
+      }
+      .nav-area li:last-of-type:hover:after{
+          background: #FFFFFF;
+          width: 10px;
+          height: 0px;
+      } 
+      .dropdown-menu{
+          background: #0d98ba;
+      }
+  </style>
 </head>
 <body bgcolor="red">
+    <!-- Topbar Start -->
+    <div class="container-fluid fixed-top ">
+        <div class="container-fluid p-0 ">
+            <div class="row bg-east py-2 px-lg-0 navbar navbar-expand-lg">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="mr-2 mb-2 mb-lg-0 text-white">Opening Hours:</p>
+                        {% for upperHomePage in upperHomePage %}
+                        <span class="mb-2 mb-lg-0 text-white">{{upperHomePage.opening_time}} - {{upperHomePage.closing_time}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="m-0 mr-1 text-white">Follow Us:</p>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white px-2 " href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-3 px-lg-5 bg-tech office-when navbar navbar-expand-lg">            
+                <div class="col-lg-8 text-center text-lg-right ">
+                    <div class="d-inline-flex align-items-end justify-content-end float-right">
+                        <div class="d-inline-flex flex-column pr-3 bg-tech border-right">
+                            <h6>Our Office</h6>
+                            <p class="m-1 text-east">{{upperHomePage.office_venue}}</p>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center bg-tech px-3 border-right">
+                            <h6>Email Us</h6>
+                            <a class="m-0 text-east " href="">{{upperHomePage.ETC_mail}}</a>
+                        </div>
+                        <div class="d-inline-flex flex-column text-center pl-3">
+                            <h6>Call Us</h6>
+                            <p class="m-0 text-east">{{upperHomePage.ETC_phone}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar Start -->
+    
+        <div class="row navbar navbar-expand  py-2 px-lg-0 m-5 container-fluid fixed-top p-3" style="width:100%;">
+            <nav class=" nav-area">
+                <li>
+                    {% for upperHomePage in upperHomePage %}
+                    <a href="#">
+                            <img src="{{upperHomePage.school_logo.url}}" style="width:47%; height:45%;" alt="Logo" />
+                    </a>
+                        
+                    {% endfor %}
+                </li>
+    
+                <li>
+                    <div class="text-centerd-inline-flex">
+                        <div class="text-center">
+                            <a href="/" class="active nav-link  ">HOME</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="/about" class="nav-link dropdown-toggle " style="border: none;" data-toggle="dropdown">ABOUT US</a>
+                        <div class="dropdown-menu text-capitalize">
+                        <a href="/about" class="dropdown-item ">About the College</a>
+                        <a href="/message_from_principal" class="dropdown-item ">Message From the Principal</a>
+                    </div>
+                
+                </li>
+    
+                <li>
+                    <div class="dropdown">
+                        <a href="/programmes/programmes" class="nav-link dropdown-toggle " data-toggle="dropdown">PROGRAMMES</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="/programmes/programmes" class="dropdown-item ">Programmes</a>
+                            <a href="/programmes/Application_Letter" class="dropdown-item ">Application_Letter</a>
+                            <a href="/programmes/computing" class="dropdown-item ">School of Computer Studies</a>
+                            <a href="/programmes/business_school" class="dropdown-item ">School of Business Studies</a>
+                            <a href="single.html" class="dropdown-item ">School of Project Management</a>
+                            <a href="single.html" class="dropdown-item ">School of Computer Studies</a>
+                            <a href="single.html" class="dropdown-item ">School of Computer Studies</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">ADMISSIONS</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Admissions</a>
+                            <a href="single.html" class="dropdown-item ">Admission Requirements</a>
+                            <a href="blog.html" class="dropdown-item ">Examination Fees</a>
+                            <a href="single.html" class="dropdown-item ">Apply Online</a>
+                            <a href="blog.html" class="dropdown-item ">Payment Details</a>
+                            <a href="single.html" class="dropdown-item ">FAQs</a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class=" dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">FACILITIES</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Accommodation</a>
+                            <a href="single.html" class="dropdown-item ">Library and Laboratories</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">MEDIA</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item ">Downloads</a>
+                            <a href="single.html" class="dropdown-item ">Gallery</a>
+                            <a href="single.html" class="dropdown-item ">News</a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li>
+                    <a href="contact.html" class="nav-link">CONTACT US</a>
+                </li>
+            </nav>
+        </div>
+    
+
+    <!-- Navbar End -->
+
     {% block content %}
 
 

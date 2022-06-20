@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -34,6 +35,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+   
     
     <!-- custom css -->
 
@@ -71,7 +73,7 @@
             position: relative;
             top: 50%;
             left: 30%;
-            transform: translate(-33.9%, 50%);
+            transform: translate(-33.9%, 90%);
             height: 60px;
             display: block;
             list-style: none;
@@ -181,6 +183,7 @@
             background: #0d98ba;
         }
     </style>
+    
 </head>
 
 <body class="bg-white">
@@ -287,14 +290,14 @@
                 
                 <li>
                     <div class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">ADMISSIONS</a>
+                        <a href="/admissions/admissions" class="nav-link dropdown-toggle " data-toggle="dropdown">ADMISSIONS</a>
                         <div class="dropdown-menu text-capitalize">
-                            <a href="blog.html" class="dropdown-item ">Admissions</a>
-                            <a href="single.html" class="dropdown-item ">Admission Requirements</a>
-                            <a href="blog.html" class="dropdown-item ">Examination Fees</a>
-                            <a href="single.html" class="dropdown-item ">Apply Online</a>
-                            <a href="blog.html" class="dropdown-item ">Payment Details</a>
-                            <a href="single.html" class="dropdown-item ">FAQs</a>
+                            <a href="/admissions/admissions" class="dropdown-item ">Admissions</a>
+                            <a href="/admissions/requirements" class="dropdown-item ">Admission Requirements</a>
+                            <a href="/admissions/fees" class="dropdown-item ">Examination Fees</a>
+                            <a href="/admissions/online_application" class="dropdown-item ">Apply Online</a>
+                            <a href="/admissions/payment_details" class="dropdown-item ">Payment Details</a>
+                            <a href="/admissions/FAQS" class="dropdown-item ">FAQs</a>
                         </div>
                     </div>
                 </li>
@@ -332,117 +335,6 @@
 
 
 
-    <!----- programmes offered at ETC -->
-    <div class="container-fluid" style="position: relative;margin-top: 24%;" >
-    <div class="container-fluid my-5 p-0 py-5" style="background: #f6f6f6;">
-        <div class="container p-0 py-5">
-            
-            <p>We offer the following programmes at East Technical College</p>
-        
-            
-    <table border="1">
-        <tr>
-            <th class="thead">Course name</th>
-            <th class="thead">School</th>
-            <th class="thead">Duration</th>
-            <th class="thead">Intake</th>
-            <th class="thead">Application End</th>
-            <th class="thead">Requirements</th>
-            <th class="thead">Examination Body</th>
-        </tr>
-        {% for program in program  %}
-        {% if program.school == "Business"  %}
-        <tr>
-            <td class="td">
-                {{program.programme_name}}
-            </td>
-            <td class="td">
-                {{program.school}}
-            </td>
-            <td class="td">
-                {{program.programme_duration}}
-            </td>
-            <td class="td">
-                {{program.Intake_from}}
-            </td>
-            <td class="td">
-                {{program.Intake_to}}
-            </td>
-            <td class="td">
-                {{program.programme_requirements}}
-            </td>
-            <td class="td">
-                {{program.examination_body}}
-            </td>
-            </tr>
-        {% endif %}
-        
-        {% endfor %}
-    </table>
-</div>
-</div>
-</div>
-
-    <!----- programmes offered at ETC -->
-
-    <!----- programmes offered at ETC -->
-    <div class="container-fluid" style="position: relative;margin-top: 24%;" >
-        <div class="container-fluid my-5 p-0 py-5" style="background: #f6f6f6;">
-            <div class="container p-0 py-5">
-                {% for program in program  %}
-                {% if forloop.first %}
-                <p>The following courses are available for Application as from {{program.Intake_from}} to {{program.Intake_to}}</p>
-                {% endif %}            
-                {% endfor %}
-        <table class"table table-striped table-dark tableWidth table-bordered">
-            <tr>
-                <th class="thead">Course name</th>
-                <th class="thead">School</th>
-                <th class="thead">Duration</th>
-                <th class="thead">Intake</th>
-                <th class="thead">Application End</th>
-                <th class="thead">Requirements</th>
-                <th class="thead">Examination Body</th>
-            </tr>
-            {% for program in program  %}
-
-            {% if program.vacancy %}
-            
-            {% if program.school == "Business"  %}
-        <tr>
-            <td class="td">
-                {{program.programme_name}}
-            </td>
-            <td class="td">
-                {{program.school}}
-            </td>
-            <td class="td">
-                {{program.programme_duration}}
-            </td>
-            <td class="td">
-                {{program.Intake_from}}
-            </td>
-            <td class="td">
-                {{program.Intake_to}}
-            </td>
-            <td class="td">
-                {{program.programme_requirements}}
-            </td>
-            <td class="td">
-                {{program.examination_body}}
-            </td>
-            </tr>
-        {% endif %}
-            {% endif %}
-            
-            
-            {% endfor %}
-        </table>
-    </div>
-    </div>
-    </div>
-    </div>
-        <!----- programmes offered at ETC -->
 
 
 
@@ -450,8 +342,8 @@
 
 
 
-
-<!-- Footer Start -->
+    
+    <!-- Footer Start -->
     <div class="container-fluid bg-college text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
@@ -493,7 +385,7 @@
                             <form action="#" method="post" class="p-0 ">
                                 
                                     <input type="email" placeholder="example@email.com" />
-                                
+                               
                                     <input type="text" placeholder="Subject" />
                                 
                                     <textarea name="" id=""></textarea>
@@ -540,7 +432,10 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
         <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
-    </body>
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+</body>
 
 </html>
